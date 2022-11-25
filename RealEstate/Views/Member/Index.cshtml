@@ -1,0 +1,36 @@
+﻿@model List<Member>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Üye Listesi</h1>
+<table class="table table-bordered table-striped table-hover">
+    <tr>
+        <th>#</th>
+        <th>Üye Adı</th>
+        <th> Üye Soyadı</th>
+        <th>Üye Mail</th>
+        <th>Üye Resmi</th>
+        <th>Sil</th>
+        <th>Düzenle</th>
+        <th>İlanlar</th>
+
+
+
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.MemberID</td>      
+            <td>@item.MemberName</td>
+            <td>@item.MemberSurname</td>
+            <td>@item.MemberMail</td>
+            <td>@item.MemberImage</td>
+            <td><a href="/Member/DeleteMember/@item.MemberID" class="btn btn-danger">sil</a></td>
+            <td><a href="" class="btn alert-success">Düzenle</a></td>
+                 <td><a href="" class="btn btn-success">İlanlar</a></td>
+        </tr>
+    }
+

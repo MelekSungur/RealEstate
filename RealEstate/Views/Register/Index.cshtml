@@ -1,0 +1,48 @@
+﻿
+@using RealEstate.PresentationLayer.Models;
+@model UserRegisterViewModel
+
+
+@{
+    Layout = null;
+}
+<div class="container">
+    <form method="post">
+        <label>Adınız</label>
+        <input type="text" asp-for="name"class="form-control" />
+        <span asp-validation-for="name" class="text-danger"></span>
+
+        <br />
+        <label>Soyadınız</label>
+        <input type="text" asp-for="surname" class="form-control" />
+        <span asp-validation-for="surname" class="text-danger"></span>
+
+        <br />
+        <label>Mail Adresiniz</label>
+        <input type="text" asp-for="mail" class="form-control" />
+        <span asp-validation-for="mail" class="text-danger"></span>
+
+        <br />
+        <label>Kullanıcı Adınız </label>
+        <input type="text" asp-for="username" class="form-control" />
+        <span asp-validation-for="username" class="text-danger"></span>
+
+        <br />
+        <label>Şifreniz</label>
+        <input type="text" asp-for="password" class="form-control" />
+        <span asp-validation-for="password" class="text-danger"></span>
+
+        
+        
+        <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+        <br />
+        <label>Şifre Tekrar</label>
+        <input type="text" asp-for="confirmpassword" class="form-control" />
+        <span asp-validation-for="confirmpassword" class="text-danger"></span>
+        <br />
+        <div asp-validation-summary="ModelOnly"></div>
+        <button class="btn btn-outline-dark">Kullanıcıyı Kaydet</button>
+    </form>
+</div>
+<link href="~/css/site.css" rel="stylesheet" />
